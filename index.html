@@ -7,80 +7,80 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Neptune Documents</title>
     <!-- <link rel="stylesheet" href="reset.css" /> -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <!-- <link rel="stylesheet" href="style.css" /> -->
     <link rel="stylesheet" href="tail.css" />
   </head>
 
-  <body class="flex bg-color-grey h-screen">
+  <body class="flex bg-color-grey">
     <!-- this is left side bar -->
-    <div class="side bg-white flex flex-col p-10 h-screen w-100">
-      <!-- logo -->
-      <header class="left pb-6 h-15">
-        <picture>
-          <img src="assets/icons/Union.svg" />
-        </picture>
-      </header>
+    <div class="side bg-white flex flex-col justify-between w-100 p-7 h-screen">
+      <div class="flex flex-col">
+        <!-- logo -->
+        <header class="left pb-6">
+          <picture>
+            <img src="assets/icons/Union.svg" />
+          </picture>
+        </header>
 
-      <!-- profile -->
-      <div class="profile-dock border-1 rounded h-16">
-        <main class="lmain flex w-full">
-          <div class="logo p-4">
-            <picture>
-              <img src="assets/icons/Group 79.svg" />
-            </picture>
-          </div>
-          <div class="profile self-center w-full">
-            <div class="name font-spline-sans font-extrabold text-base">
-              Jessica Thompson
+        <!-- profile -->
+        <div class="profile-dock border-1 rounded">
+          <main class="lmain flex w-full">
+            <div class="logo p-4">
+              <picture>
+                <img src="assets/icons/Group 79.svg" />
+              </picture>
             </div>
-            <div class="utype text-xs font-spline-sans font-normal">
-              Primary User
+            <div class="profile self-center w-full">
+              <div class="name font-spline-sans font-extrabold text-base">
+                Jessica Thompson
+              </div>
+              <div class="utype text-xs font-spline-sans font-normal">
+                Primary User
+              </div>
             </div>
-          </div>
-          <div class="drop self-center pr-4">
-            <picture>
-              <img src="assets/icons/Shape.svg" />
-            </picture>
-          </div>
-        </main>
-      </div>
-
-      <!-- nav-left -->
-      <div
-        class="space border-stone-700 pt-3 flex flex-col h-70 justify-between"
-      >
-        <div class="menu flex flex-col gap-[4px]">
-          <span class="menu-item">
-            <img src="assets/icons/home 1.svg" />
-            <a href="#"> Home </a>
-          </span>
-
-          <span class="menu-item bg-green-300" id="doc">
-            <img src="assets/icons/file-text 1.svg" />
-            <a href="#"> Documents </a>
-          </span>
-
-          <span class="menu-item">
-            <img src="assets/icons/message-circle 1.svg" />
-            <a href="#"> Chat with Neptune </a>
-          </span>
-
-          <span class="menu-item">
-            <img src="assets/icons/help-circle 1.svg" />
-            <a href="#"> Help </a>
-          </span>
-
-          <span class="menu-item">
-            <img src="assets/icons/settings 1.svg" />
-            <a href="#"> Settings </a>
-          </span>
+            <div class="drop self-center pr-4">
+              <picture>
+                <img src="assets/icons/Shape.svg" />
+              </picture>
+            </div>
+          </main>
         </div>
+
+        <!-- nav-left -->
+        <div class="space border-stone-700 pt-3 flex flex-col justify-between">
+          <div class="menu flex flex-col gap-[4px]">
+            <span class="menu-item">
+              <img src="assets/icons/home 1.svg" />
+              <a href="#"> Home </a>
+            </span>
+
+            <span class="menu-item bg-green-300" id="doc">
+              <img src="assets/icons/file-text 1.svg" />
+              <a href="#"> Documents </a>
+            </span>
+
+            <span class="menu-item">
+              <img src="assets/icons/message-circle 1.svg" />
+              <a href="#"> Chat with Neptune </a>
+            </span>
+
+            <span class="menu-item">
+              <img src="assets/icons/help-circle 1.svg" />
+              <a href="#"> Help </a>
+            </span>
+
+            <span class="menu-item">
+              <img src="assets/icons/settings 1.svg" />
+              <a href="#"> Settings </a>
+            </span>
+          </div>
+        </div>
+
+        <!-- empty space -->
       </div>
 
-      <!-- empty space -->
-      <div class="flex-1 border border-stone-700"></div>
-
-      <div class="foot flex flex-col gap-4 h-16">
+      <div class="foot flex flex-col gap-4">
         <picture>
           <img src="assets/icons/Vector.svg" />
         </picture>
