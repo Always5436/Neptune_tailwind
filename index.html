@@ -7,41 +7,54 @@
     <title>Neptune Documents</title>
     <!-- <link rel="stylesheet" href="reset.css" /> -->
     <!-- <link rel="stylesheet" href="style.css" /> -->
+    <link rel="stylesheet" href="tail.css" />
   </head>
-  <body>
+
+  <body class="flex bg-color-grey h-screen">
     <!-- this is left side bar -->
-    <div class="side">
-      <header class="left">
+    <div class="side bg-white flex flex-col p-10 h-screen w-100">
+      <!-- logo -->
+      <header class="left pb-6 h-15">
         <picture>
           <img src="assets/icons/Union.svg" />
         </picture>
       </header>
 
-      <main class="lmain">
-        <div class="logo">
-          <picture>
-            <img src="assets/icons/Group 79.svg" />
-          </picture>
-        </div>
-        <div class="profile">
-          <div class="name">Jessica Thompson</div>
-          <div class="utype">Primary User</div>
-        </div>
-        <div class="drop">
-          <picture>
-            <img src="assets/icons/Shape.svg" />
-          </picture>
-        </div>
-      </main>
+      <!-- profile -->
+      <div class="profile-dock border-1 rounded h-16">
+        <main class="lmain flex w-full">
+          <div class="logo p-4">
+            <picture>
+              <img src="assets/icons/Group 79.svg" />
+            </picture>
+          </div>
+          <div class="profile self-center w-full">
+            <div class="name font-spline-sans font-extrabold text-base">
+              Jessica Thompson
+            </div>
+            <div class="utype text-xs font-spline-sans font-normal">
+              Primary User
+            </div>
+          </div>
+          <div class="drop self-center pr-4">
+            <picture>
+              <img src="assets/icons/Shape.svg" />
+            </picture>
+          </div>
+        </main>
+      </div>
 
-      <div class="space">
-        <div class="menu">
+      <!-- nav-left -->
+      <div
+        class="space border-stone-700 pt-3 flex flex-col h-70 justify-between"
+      >
+        <div class="menu flex flex-col gap-[4px]">
           <span class="menu-item">
             <img src="assets/icons/home 1.svg" />
             <a href="#"> Home </a>
           </span>
 
-          <span class="menu-item" id="doc">
+          <span class="menu-item bg-green-300" id="doc">
             <img src="assets/icons/file-text 1.svg" />
             <a href="#"> Documents </a>
           </span>
@@ -61,27 +74,37 @@
             <a href="#"> Settings </a>
           </span>
         </div>
+      </div>
 
-        <div class="foot">
-          <picture>
-            <img src="assets/icons/Vector.svg" />
-          </picture>
-          <div>
-            <h1>Having trouble?</h1>
-            <p>
-              Feel free to contact us and we will always help you through the
-              process.
-            </p>
-          </div>
-          <button><p>Contact Us</p></button>
+      <!-- empty space -->
+      <div class="flex-1 border border-stone-700"></div>
+
+      <div class="foot flex flex-col gap-4 h-16">
+        <picture>
+          <img src="assets/icons/Vector.svg" />
+        </picture>
+        <div>
+          <h1 class="text-sky-950 text-2xl font-medium">Having trouble?</h1>
+          <p class="font-normal text-base">
+            Feel free to contact us and we will always help you through the
+            process.
+          </p>
         </div>
+        <button class="border-0 bg-sky-950 rounded-md p-2 w-fit">
+          <p class="text-white">Contact Us</p>
+        </button>
       </div>
     </div>
 
     <!-- side pane ends here -->
 
-    <div class="right">
+    <!-- right side start -->
+    <div class="right pt-">
+      <div class="left-icon">
+        <!-- <img src="assets/icons/angle-left-solid.svg" alt="close menu" class="close-menu" /> -->
+      </div>
       <header>
+        <!-- <div class="menu-bar"><img</div> -->
         <p class="home">Home</p>
         <img src="assets/icons/right-arrow.svg" />
         <p class="docs">Documents</p>
@@ -97,121 +120,26 @@
       </main>
 
       <div class="tbl">
-        <table>
-          <tr class="tb" id="r1">
-            <th class="tb" id="c1">
-              <input type="checkbox" /><img src="assets/icons/Shape.svg" />
-            </th>
-            <th class="tb" id="c2">Document Name</th>
-            <th class="tb" id="c3">Status</th>
-            <th class="tb" id="c4">Last Modified</th>
-            <th class="tb" id="c5"></th>
-          </tr>
-
-          <tr class="tb" id="r2">
-            <td class="tb" id="c1"><input type="checkbox" /></td>
-            <td class="tb" id="c2">Title of Documents Goes Here</td>
-            <td class="tb" id="c3">
-              <button><p>Needs Signing</p></button>
-            </td>
-            <td class="tb" id="c4">
-              <time
-                ><p>10/22/2024<br />2:01 pm</p></time
-              >
-            </td>
-            <td class="tb" id="c5">
-              <button><p>Sign now</p></button>
-              <img src="assets/icons/menubutton.svg" />
-            </td>
-          </tr>
-
-          <tr class="tb" id="r3">
-            <td class="tb" id="c1"><input type="checkbox" /></td>
-            <td class="tb" id="c2">Title of Documents Goes Here</td>
-            <td class="tb" id="c3">
-              <button>Pending</button>
-              <p>Waiting for <span>1 person</span></p>
-            </td>
-            <td class="tb" id="c4">
-              <time
-                ><p>10/22/2024<br />2:01 pm</p></time
-              >
-            </td>
-            <td class="tb" id="c5">
-              <button><p>Preview</p></button
-              ><img src="assets/icons/menubutton.svg" />
-            </td>
-          </tr>
-
-          <tr class="tb" id="r4">
-            <td class="tb" id="c1"><input type="checkbox" /></td>
-            <td class="tb" id="c2">Title of Documents Goes Here</td>
-            <td class="tb" id="c3">
-              <button>Pending</button>
-              <p>Waiting for <span>2 person</span></p>
-            </td>
-            <td class="tb" id="c4">
-              <time
-                ><p>10/22/2024<br />2:01 pm</p></time
-              >
-            </td>
-            <td class="tb" id="c5">
-              <button><p>Preview</p></button
-              ><img src="assets/icons/menubutton.svg" />
-            </td>
-          </tr>
-          <tr class="tb" id="r5">
-            <td class="tb" id="c1"><input type="checkbox" /></td>
-            <td class="tb" id="c2">Title of Documents Goes Here</td>
-            <td class="cmt" id="c3">
-              <button><p>Completed</p></button>
-            </td>
-            <td class="tb" id="c4">
-              <time
-                ><p>10/22/2024<br />2:01 pm</p></time
-              >
-            </td>
-            <td class="tb" id="c5">
-              <button><p>Download PDF</p></button
-              ><img src="assets/icons/menubutton.svg" />
-            </td>
-          </tr>
-
-          <tr class="tb" id="r6">
-            <td class="tb" id="c1"><input type="checkbox" /></td>
-            <td class="tb" id="c2">Title of Documents Goes Here</td>
-            <td class="cmt" id="c3">
-              <button><p>Completed</p></button>
-            </td>
-            <td class="tb" id="c4">
-              <time
-                ><p>10/22/2024<br />2:01 pm</p></time
-              >
-            </td>
-            <td class="tb" id="c5">
-              <button><p>Download PDF</p></button
-              ><img src="assets/icons/menubutton.svg" />
-            </td>
-          </tr>
-
-          <tr class="tb" id="r7">
-            <td class="tb" id="c1"><input type="checkbox" /></td>
-            <td class="tb" id="c2">Title of Documents Goes Here</td>
-            <td class="cmt" id="c3">
-              <button><p>Completed</p></button>
-            </td>
-            <td class="tb" id="c4">
-              <time
-                ><p>10/22/2024<br />2:01 pm</p></time
-              >
-            </td>
-            <td class="tb" id="c5">
-              <button><p>Download PDF</p></button
-              ><img src="assets/icons/menubutton.svg" />
-            </td>
-          </tr>
+        <table class="main-table">
+          <thead class="table-head">
+            <tr class="tb" id="r1">
+              <th class="tb" id="c1">
+                <input type="checkbox" /><img src="assets/icons/Shape.svg" />
+              </th>
+              <th class="tb" id="c2">Document Name</th>
+              <th class="tb" id="c3">Status</th>
+              <th class="tb" id="c4">Last Modified</th>
+              <th class="tb" id="c5">
+                <button class="add" name="add-ele">Add</button>
+                <input type="file" id="file-input" style="display: none" />
+              </th>
+            </tr>
+          </thead>
+          <tbody class="table-body" name="table-body"></tbody>
         </table>
       </div>
     </div>
   </body>
+  <script src="script.js"></script>
+  <script src="test.js"></script>
 </html>

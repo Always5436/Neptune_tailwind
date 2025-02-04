@@ -41,7 +41,6 @@ header{
     padding-bottom: 25px;
 }
 
-
 .lmain{
     display:flex;
     border: 0.5px solid #b5bdcd;
@@ -49,7 +48,40 @@ header{
     padding: 14px;
 }
 
+.profile-dock{
+    position: relative;
+}
 
+.ticket {
+    position: absolute;
+    top: 100%; /* Position below the profile */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 366px;
+    height: 366px;
+    background-color: #ffd700; /* Gold color */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    opacity: 0; /* Initially hidden */
+    visibility: hidden; /* Initially hidden */
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    padding: 20px;
+}
+
+.profile-dock:hover + .ticket {
+    opacity: 1; /* Show on hover */
+    visibility: visible; /* Make the ticket visible */
+}
+
+/* Ticket content styling */
+.ticket h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.ticket p {
+    text-align: center;
+}
 
 .drop{
     align-self: center;
@@ -286,27 +318,61 @@ main button{
 /* table only */
 
 
+
+
+
+
+
+.tbl{
+    width: 1084px;
+    height: 571px;
+    top: 164px;
+    left: 431px;
+    gap: 0px;
+    border-radius: 8px 8px;
+    border: 0.5px solid #B5BDCD;
+    opacity: 0px;
+    background: #FFFFFF;
+    overflow-y: auto;
+}
+
+table{
+    width: 100%;
+    background-color: #ffffff;
+    
+}
+
+thead{
+    z-index: 1;
+    position: sticky;
+    top: 0px;
+    background-color: #ffffff;
+    border: 1px solid #B5BDCD;
+}
+
+tbody{
+    
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
 #c2, #c3, #c4, #c5{
     text-align: left;
     align-content:center;
+}
+
+tr{
+    height: 86px;
+    border-bottom: 1px solid #E8ECF1;
 }
 
 #r1{
     height:56px;
 }
 
-#r2,#r3,#r4,#r5,#r6,#r7{
-    height: 86px;
-}
-
-table{
-    width: 100%;
-    background-color: #ffffff;
-}
 
 #c1{
     width:83px;
-    height: 56px;
     text-align: center;
     align-content: center;
 }
@@ -314,19 +380,23 @@ table{
 #c5{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* background-color: red; */
+    align-self: center;
+    height:86px;
 }
 
 #c5 button{
     width: 134px;
     height: 34px;
-    top: 423px;
-    left: 1323px;
-    gap: 0px;
+    /* left: 1323px; */
+    /* gap: 0px; */
     border-radius: 5px;
-    opacity: 0px;
+    /* opacity: 0px; */
     border: 1px solid #B5BDCD;
-    background-color: #ffffff;
+    background: #ffffff;
+    /* align-self: center; */
 
 }
 
@@ -353,119 +423,7 @@ table{
     color: #626D82;
 }
 
-#r2 #c3 button{
-    width: 139px;
-    height: 26px;
-    top: 241px;
-    left: 919px;
-    gap: 0px;
-    border:none;
-    border-radius: 22px;
-    opacity: 0px;
-    background: #436D7C;
-    color:#ffffff;
-    font-family: Inter;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 19.36px;
-    text-align: center;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-
-
-}
-
-#r4 #c3 button{
-    width: 85px;
-    height: 26px;
-    top: 326px;
-    left: 919px;
-    gap: 0px;
-    border:none;
-    border-radius: 22px ;
-    opacity: 0px;
-    font-family: Inter;
-    font-size: 15px;
-    font-weight: 500;
-    line-height: 18.15px;
-    text-align: center; 
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-    color: #626D82;
-}
-
-#r3 #c3 button{
-    width: 85px;
-    height: 26px;
-    top: 326px;
-    left: 919px;
-    gap: 0px;
-    border:none;
-    border-radius: 22px ;
-    opacity: 0px;
-    font-family: Inter;
-    font-size: 15px;
-    font-weight: 500;
-    line-height: 18.15px;
-    text-align: center; 
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-    color: #626D82;
-}
-
-#r3 #c3 p{
-    font-family: Inter;
-font-size: 16px;
-font-style: italic;
-font-weight: 500;
-line-height: 19.36px;
-text-align: left;
-text-underline-position: from-font;
-text-decoration-skip-ink: none;
-color: #B5BDCD;
-
-}
-
-#r4 #c3 p{
-    font-family: Inter;
-font-size: 16px;
-font-style: italic;
-font-weight: 500;
-line-height: 19.36px;
-text-align: left;
-text-underline-position: from-font;
-text-decoration-skip-ink: none;
-color: #B5BDCD;
-
-}
-
-#r4 #c3 span{
-    font-family: Inter;
-font-size: 16px;
-font-style: italic;
-font-weight: 500;
-line-height: 19.36px;
-text-align: left;
-text-underline-position: from-font;
-text-decoration-skip-ink: none;
-color: #436D7C;
-
-}
-
-#r3 #c3 span{
-    font-family: Inter;
-font-size: 16px;
-font-style: italic;
-font-weight: 500;
-line-height: 19.36px;
-text-align: left;
-text-underline-position: from-font;
-text-decoration-skip-ink: none;
-color: #436D7C;
-
-}
-
-.cmt button{
+/* .cmt button{
     width: 105px;
 height: 26px;
 top: 508px;
@@ -483,7 +441,7 @@ text-underline-position: from-font;
 text-decoration-skip-ink: none;
 color: #1F4451;
 background: #D3F7B5;
-}
+} */
 
 #c2{
     /* styleName: Neptune/Title; */
@@ -519,4 +477,87 @@ text-align: left;
 text-underline-position: from-font;
 text-decoration-skip-ink: none;
 color: #2A2A2A;
+}
+
+#c3 .Pending{
+    width: 85px;
+height: 26px;
+top: 326px;
+left: 919px;
+gap: 0px;
+border-radius: 22px;
+opacity: 0px;
+font-family: Inter;
+font-size: 15px;
+font-weight: 500;
+line-height: 18.15px;
+text-align: center;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+background: #626D82;
+color:#ffffff;
+
+}
+
+#c3 .Completed{
+    width: 105px;
+height: 26px;
+top: 508px;
+left: 919px;
+gap: 0px;
+border-radius: 22px;
+opacity: 0px;
+font-family: Inter;
+font-size: 15px;
+font-weight: 500;
+line-height: 18.15px;
+text-align: center;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+color: #1F4451;
+background: hsl(93, 80%, 84%);
+
+}
+
+/* need signing button */
+#c3 .Need{ 
+width: 139px;
+height: 26px;
+gap: 0px;
+border-radius: 22px;
+gap: 0px;
+opacity: 0px;
+font-family: Inter;
+font-size: 16px;
+font-weight: 500;
+line-height: 19.36px;
+text-align: center;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+color: #FFFFFF;
+background: #436D7C;
+}
+
+#input-file{
+        display: none;
+}
+
+.close-menu{
+    box-sizing: border-box;
+    height: 30px;
+    width: 30px;
+    margin-left: -75px;
+    border: 2px solid #2A2A2A;
+}
+
+.open-menu{
+    box-sizing: border-box;
+    height: 30px;
+    width: 30px;
+    margin-left: -75px;
+    border: 2px solid #2A2A2A;
+}
+
+.hidd{
+    display: none;
 }
