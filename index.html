@@ -8,7 +8,43 @@
     <title>Neptune Documents</title>
     <!-- <link rel="stylesheet" href="reset.css" /> -->
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+ <style type="text/tailwindcss">
+      @layer utilities{
+    .bg-color-grey{
+        background-color: #f3f2f0;
+    },
 
+    .border-1{
+        /* border:1px solid black; */
+        border:0.5px solid #B5BDCD;
+    }
+
+    .menu-item{
+        @apply flex flex-row gap-5 h-12 items-center pl-4 rounded-md;
+    }
+
+    .p{
+        font-family: "Spline Sans", serif;
+    }
+
+    .tb{
+        border-bottom: 1px solid #E8ECF1;   
+        
+    }
+
+    .Completed{
+        @apply w-[85px] rounded-xl text-center font-medium bg-green-300 text-green-900 text-base;
+    }
+
+    .Pending{
+        @apply w-[85px] rounded-xl text-center font-medium bg-slate-400 text-slate-800 text-base;
+    }
+
+    .Need{
+        @apply w-[85px] rounded-xl text-center font-medium bg-sky-950 text-white text-base;
+    }
+}
+    </style>
     <!-- <link rel="stylesheet" href="style.css" /> -->
     <link rel="stylesheet" href="tail.css" />
   </head>
@@ -144,44 +180,6 @@
         </table>
       </div>
     </div>
-
-    <style type="text/tailwindcss">
-      @layer utilities{
-    .bg-color-grey{
-        background-color: #f3f2f0;
-    },
-
-    .border-1{
-        /* border:1px solid black; */
-        border:0.5px solid #B5BDCD;
-    }
-
-    .menu-item{
-        @apply flex flex-row gap-5 h-12 items-center pl-4 rounded-md;
-    }
-
-    .p{
-        font-family: "Spline Sans", serif;
-    }
-
-    .tb{
-        border-bottom: 1px solid #E8ECF1;   
-        
-    }
-
-    .Completed{
-        @apply w-[85px] rounded-xl text-center font-medium bg-green-300 text-green-900 text-base;
-    }
-
-    .Pending{
-        @apply w-[85px] rounded-xl text-center font-medium bg-slate-400 text-slate-800 text-base;
-    }
-
-    .Need{
-        @apply w-[85px] rounded-xl text-center font-medium bg-sky-950 text-white text-base;
-    }
-}
-    </style>
   </body>
   <script src="script.js"></script>
   <script src="test.js"></script>
