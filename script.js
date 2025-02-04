@@ -50,14 +50,14 @@ function renderList (arr){
     let listEntry = '';
     arr.forEach((ele,i)=> {
         listEntry += `
-        <tr data-id="${i}">
-            <td class="check" id="c1"><input type="checkbox" value="false"></td>
+        <tr class="tb h-fit" data-id="${i}">
+            <td class="check text-center w-[83px]" id="c1"><input type="checkbox" value="false"></td>
             <td class="docName" id="c2">${ele.docName}</td>
             <td class="status" id="c3"><button class="${ele.status}">${ele.status}</button></td>
             <td class="mod" id="c4"><p>${ele.modDate}<br>${ele.modTime}</p></td>
-            <td class="final-ele" id="c5">
-                <button class="down"><p><span id=down>${ele.down}</span></p></button>
-                <img src="./assets/icons/delete-button.svg" class="del">
+            <td class="final-ele flex justify-center h-full" id="c5">
+                <button class="down text-base text-center border-1 h-fit self-center border-slate-600 rounded-xl w-30"><p><span class="text-slate-600" id=down>${ele.down}</span></p></button>
+                <img class="h-fit self-center" src="./assets/icons/delete-button.svg" class="del">
             </td>
         </tr>
         `
