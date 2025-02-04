@@ -1,0 +1,22 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300..700&display=swap');
+
+
+@layer utilities{
+    .bg-color-grey{
+        background-color: #f3f2f0;
+    },
+
+    .border-1{
+        /* border:1px solid black; */
+        border:0.5px solid #B5BDCD;
+    }
+
+    .menu-item{
+        @apply flex flex-row gap-5 h-12 items-center pl-4 rounded-md;
+    }
+
+    .p{
+        font-family: "Spline Sans", serif;
+    }
+}
