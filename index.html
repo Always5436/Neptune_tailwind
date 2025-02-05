@@ -8,44 +8,44 @@
     <title>Neptune Documents</title>
     <!-- <link rel="stylesheet" href="reset.css" /> -->
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
- <style type="text/tailwindcss">
-      @layer utilities{
-    .bg-color-grey{
-        background-color: #f3f2f0;
-    },
+    <style type="text/tailwindcss">
+      @layer components {
+        .bg-color-grey {
+          background-color: #f3f2f0;
+        }
 
-    .border-1{
-        /* border:1px solid black; */
-        border-width: 0.5px;
-        border-style: solid;
-        border-color: #B5BDCD;
-    }
+        ,
+        .border-1 {
+          /* border:1px solid black; */
+          border-width: 0.5px;
+          border-style: solid;
+          border-color: #b5bdcd;
+        }
 
-    .menu-item{
-        @apply flex flex-row gap-5 h-12 items-center pl-4 rounded-md;
-    }
+        .menu-item {
+          @apply flex flex-row gap-5 h-12 items-center pl-4 rounded-md;
+        }
 
-    .p{
-        font-family: "Spline Sans", serif;
-    }
+        .p {
+          font-family: "Spline Sans", serif;
+        }
 
-    .tb{
-        border-bottom: 1px solid #E8ECF1;   
-        
-    }
+        .tb {
+          border-bottom: 1px solid #e8ecf1;
+        }
 
-    .Completed{
-        @apply w-[85px] rounded-xl text-center font-medium bg-green-300 text-green-900 text-base;
-    }
+        .Completed {
+          @apply w-[85px] rounded-xl text-center font-medium bg-green-300 text-green-900 text-base;
+        }
 
-    .Pending{
-        @apply w-[85px] rounded-xl text-center font-medium bg-slate-400 text-slate-800 text-base;
-    }
+        .Pending {
+          @apply w-[85px] rounded-xl text-center font-medium bg-slate-400 text-slate-800 text-base;
+        }
 
-    .Need{
-        @apply w-[85px] rounded-xl text-center font-medium bg-sky-950 text-white text-base;
-    }
-}
+        .Need {
+          @apply w-[85px] rounded-xl text-center font-medium bg-sky-950 text-white text-base;
+        }
+      }
     </style>
     <!-- <link rel="stylesheet" href="style.css" /> -->
     <link rel="stylesheet" href="tail.css" />
@@ -140,9 +140,8 @@
 
     <!-- right side start -->
     <div class="right pt-1 pl-20 pr-20 flex flex-col gap-6 w-screen">
-
       <!-- menu icon -->
-      <div class="left-icon  ">
+      <div class="left-icon">
         <!-- <img class="size-fit" src="assets/icons/angle-left-solid.svg" alt="close menu" class="close-menu" /> -->
       </div>
       <header class="flex flex-row gap-3 text-base font-normal">
@@ -154,7 +153,9 @@
 
       <main class="flex flex-row justify-between">
         <p class="font-serif font-semibold text-4xl">My Documents</p>
-        <div class="search border-2 border-zinc-400 rounded-xl  h-10 bg-white flex flex-row pl-3 pr-3">
+        <div
+          class="search border-2 border-zinc-400 rounded-xl h-10 bg-white flex flex-row pl-3 pr-3"
+        >
           <input type="text" placeholder="Search documents" /><button>
             <img src="assets/icons/Layer_1.svg" />
           </button>
@@ -163,17 +164,29 @@
 
       <div class="tbl border-1 border-zinc-500 rounded-l w-full">
         <table class="main-table bg-white w-full h-120 scroll-auto">
-          <thead class="table-head text-base font-semibold h-10 border-zinc-500 text-left">
+          <thead
+            class="table-head text-base font-semibold h-10 border-zinc-500 text-left"
+          >
             <tr class="tb h-14" id="r1">
-
-              <th class="tb flex justify-center self-center h-full  w-[83px] " id="c1">
-                <input type="checkbox" /><img class="size-fit self-center" src="assets/icons/Shape.svg" />
+              <th
+                class="tb flex justify-center self-center h-full w-[83px]"
+                id="c1"
+              >
+                <input type="checkbox" /><img
+                  class="size-fit self-center"
+                  src="assets/icons/Shape.svg"
+                />
               </th>
               <th class="tb" id="c2">Document Name</th>
               <th class="tb" id="c3">Status</th>
               <th class="tb" id="c4">Last Modified</th>
               <th class="tb text-center" id="c5">
-                <button class="add border-1 bg-slate-600 text-white rounded-xl w-25" name="add-ele">Add</button>
+                <button
+                  class="add border-1 bg-slate-600 text-white rounded-xl w-25"
+                  name="add-ele"
+                >
+                  Add
+                </button>
                 <input type="file" id="file-input" style="display: none" />
               </th>
             </tr>
